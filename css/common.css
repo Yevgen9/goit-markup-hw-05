@@ -1,0 +1,350 @@
+/*  основной цвет h #757575*/
+/*  вторичный цвет p #212121 */
+/*  кнопка фон цвет    #2196F3 */
+/* кнопка шрифт цвет #FFFFFF */
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+  --button-text-color: #ffffff;
+  --background-color: #2f303a;
+}
+
+body {
+  width: 1600px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+.wrapper-nav {
+  border-bottom: 1px solid #ececec;
+}
+
+.list,
+.contacts,
+.footer,
+.filter-list,
+.ourteam-list,
+.peculiarities-list,
+.whatarewedoing-list {
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+}
+
+.peculiarities-title {
+  color: var(--primary-text-color);
+}
+
+.text {
+  color: var(--secondary-text-color);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.42px;
+}
+
+.container-nav {
+  display: flex;
+
+  align-items: center;
+}
+
+/* ЛОГО */
+
+.wrapper-nav .logo {
+  padding-left: 215px;
+
+  color: #000000;
+
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: normal;
+  letter-spacing: 0.78px;
+  text-decoration: none;
+}
+
+span {
+  color: var(--accent-color);
+
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: normal;
+  letter-spacing: 0.78px;
+}
+
+/* НАВІГАЦІЯ */
+
+.site-nav {
+  display: flex;
+
+  margin-left: 93px;
+}
+
+.site-nav .link {
+  display: block;
+  position: relative;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav .link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: var(--accent-color);
+}
+
+.site-nav .link:hover::after,
+.site-nav .link:focus::after {
+  opacity: 1;
+}
+
+.list a {
+  color: var(--primary-text-color);
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  line-height: normal;
+  word-wrap: break-word;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
+.site-nav .item:last-child {
+  margin-right: 0;
+}
+
+.contacts {
+  display: flex;
+
+  padding-left: 344px;
+}
+
+.contacts .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+
+.contacts .item:nth-child(1)::before {
+  content: "";
+  display: inline-flex;
+
+  width: 16px;
+  height: 12px;
+  background-position: center;
+
+  margin-right: 10px;
+
+  background-image: url(../images/envelope\ .svg);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts .item:nth-child(2)::before {
+  content: "";
+  display: inline-flex;
+
+  width: 10px;
+  height: 16px;
+  background-position: center;
+  margin-right: 10px;
+
+  background-image: url(../images/smartphone.svg);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts .item:nth-child(1):hover::before,
+.contacts .item:nth-child(1):focus::before {
+  background-image: url(../images/envelope2.svg);
+  transform: perspective(400px) rotateY(30deg) rotateX(30deg) rotateZ(30deg);
+}
+.contacts .item:nth-child(2):hover::before,
+.contacts .item:nth-child(2):focus::before {
+  background-image: url(../images/smartphone2.svg);
+  transform: perspective(400px) rotateY(30deg) rotateX(30deg) rotateZ(30deg);
+}
+
+.contacts .item + .item {
+  margin-left: 50px;
+}
+.contacts .item:last-child {
+  margin-right: 0;
+}
+.wrapper-nav .link {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wrapper-nav .link:hover,
+.wrapper-nav .link:focus,
+.wrapper-nav .logo:hover,
+.wrapper-nav .logo:focus {
+  color: var(--accent-color);
+}
+
+.mail a:hover,
+.mail a:focus {
+  color: var(--accent-color);
+}
+.tel a:hover,
+.tel a :focus {
+  color: var(--accent-color);
+}
+
+/* ФУТЕР */
+
+.page-footer {
+  display: flex;
+
+  background-color: var(--background-color);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.42px;
+}
+
+.page-footer .logo {
+  display: block;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding-left: 215px;
+
+  color: var(--button-text-color);
+
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  text-decoration: none;
+  letter-spacing: 0.78px;
+}
+.adress.list {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+  margin-bottom: 60px;
+  padding-left: 215px;
+}
+.adress .item + .item {
+  margin-top: 9px;
+}
+
+.list .mail,
+.list .tel {
+  color: rgba(255, 255, 255, 0.6);
+
+  text-decoration: none;
+}
+.kiev {
+  padding: 0;
+  margin: 0;
+
+  color: var(--button-text-color);
+}
+
+.adress a:hover,
+.adress a:focus,
+.page-footer a:hover {
+  color: var(--accent-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-footer {
+  display: inline-block;
+
+  margin-top: 72px;
+  margin-left: 70px;
+
+  color: white;
+}
+.social-footer .title {
+  margin: 0;
+  padding-bottom: 20px;
+
+  color: #fff;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+
+.footer-social {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social .item {
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.footer-social .item:last-child {
+  margin-right: 0;
+}
+
+.footer-social .item a {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  margin: 12px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.footer-social .action-icon {
+  fill: #ffffff;
+}
+
+.footer-social .item:hover,
+.footer-social .item:focus {
+  background-color: var(--accent-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transform: perspective(400px) rotateY(30deg) rotateX(30deg) rotateZ(30deg);
+}
